@@ -50,6 +50,9 @@ For incorrect class $j$, $e^{o_k}$ is a constant,
 > $$ =  \dfrac{e^{o_k}}{p_k} \dfrac{1}{\Big(\displaystyle\sum_{i} e^{o_i}\Big)^2}  e^{o_j} =  \dfrac{1}{p_k} \dfrac{e^{o_k}}{\displaystyle\sum_{i} e^{o_i}} \dfrac{e^{o_j}}{\displaystyle\sum_{i} e^{o_i}} $$
 >$$ = \dfrac{1}{p_k} p_k p_j = p_j $$
 
-Finally, for the exmample, we found the gradient of L w.r.t to p is:
+Consider for one hot encoded lable y, for correct class y=1, for incorrect class, y = 0, then we have an unified formula ($p$ and $y$ are tensors ):
+> $$ \dfrac{\partial L}{\partial o} = p - y $$
 
-$$ gradients = \boxed{0.090}\boxed{-0.775}\boxed{0.665} $$
+For the exmample at begining, the gradient of L w.r.t to $o$ is:
+
+$$ \dfrac{\partial L}{\partial o} = \boxed{0.090}\boxed{-0.775}\boxed{0.665} $$
